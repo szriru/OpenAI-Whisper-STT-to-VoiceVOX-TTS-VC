@@ -1,0 +1,28 @@
+# what a model to use.
+# about whisper model, see: https://github.com/openai/whisper#available-models-and-languages
+WHISPER_MODELNAME: "small"
+
+# what a device to run whisper model. gpu(cuda) or cpu
+DEVICE: "cuda"
+
+# speaker id of VOICEVOX. 3 is for ずんだもん
+VOICEVOX_SPEAKER: 3
+
+# url of VOICEVOX SERVER.
+# http://localhost:...とするのではなくttp://127.0.0.1...としてください。
+# 音声合成が完了するまでの速度に対して大きく影響が出ます。
+VOICEVOX_URL: "http://127.0.0.1:50021"
+
+# key to speak. you can speak while holding this key
+# マウスの場合は文字列で、右クリックは"mouse1",　左クリックは"mouse2", 手前のサイドボタンは"mouse3", 奥のサイドボタンは"mouse4"
+# キーボードの１つのキーを指定したい場合はutilsフォルダのkeyCodeChecker.pyを実行してキーボードを押して対応する番号(KeyCode)を確認してください。
+# キーボードの場合は数字で指定してください.例)sキーを使いたい場合は83, "83"はダメです。  
+# 複数キーの実装はまだです。
+KEY_TO_SPEAK: "mouse3"
+
+# output audio device id.
+# 出力デバイスを指定したい場合はutils/checkOutputDevices.pyを実行して一つ上の階層に出力されるoutput_devices.txtを確認して使用したいIDの番号にしてください。
+# []はデフォルトの出力デバイスのみを使用します。
+# ボイスチャットで変換後の音声のみを特定のデバイスに出力したい場合は出力したいデバイスのIDをintで追加してください。
+# 例）いま耳につけているUSB Headsetへの出力とVoiceMeeter Inputへの出力をしたい場合はutils/checkOutputDevices.pyからそのデバイス番号を確認してたとえば[6,8]というようにする。
+OUTPUT_AUDIO_DEVICE_ID: [7]
